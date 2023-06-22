@@ -6,10 +6,77 @@ public class Main {
 //        System.out.println("Enter the number: ");
 //        Scanner sc = new Scanner(System.in);
 //        int num=sc.nextInt();
-        pattern6(5);
+        pattern11(5);
 
 
 
+    }
+//    -----------------------------------------------------------------------------------------------------------------
+
+
+//    -----------------------------------------------------------------------------------------------------------------
+
+    static void pattern11(int num){
+        for(int row=0 ; row<=num ; row++){
+            for(int space=0; space<row ; space++){
+                System.out.print("  ");
+            }
+            for(int col=row; col<num; col++){
+                System.out.print("   *");
+            }
+            System.out.println();
+        }
+    }
+//    -----------------------------------------------------------------------------------------------------------------
+    static void pattern10(int num){
+        for(int row=0 ; row<num ; row++){
+            for(int space=row; space<num-1 ; space++){
+                System.out.print("  ");
+            }
+            for(int col=0 ; col<=row ; col++){
+                System.out.print("   *");
+            }
+            System.out.println();
+        }
+    }
+//    -----------------------------------------------------------------------------------------------------------------
+
+    static void pattern9(int num){
+        for(int row=0 ; row<num ; row++){
+            for(int space=0 ; space<row ; space++){
+                System.out.print("  ");
+            }
+            for(int col=row*2 ; col<2*num-1 ; col++){
+                System.out.print(" *");
+            }
+            System.out.println();
+        }
+    }
+//    -----------------------------------------------------------------------------------------------------------------
+
+    static void pattern8(int num){
+        for(int row=1 ; row<=num ; row++){
+            for(int space=row ; space<num ; space++){
+                System.out.print("  ");
+            }
+            for(int col=1 ; col<2*row ; col++){
+                System.out.print(" *");
+            }
+            System.out.println();
+        }
+    }
+//    -----------------------------------------------------------------------------------------------------------------
+
+    static void pattern7(int num){
+        for(int row=1 ; row<=num ; row++){
+            for(int space=1; space<row; space++){
+                System.out.print("  ");
+            }
+            for(int col=row ; col<=num ; col++){
+                System.out.print(" *");
+            }
+            System.out.println();
+        }
     }
 
 //    -----------------------------------------------------------------------------------------------------------------
