@@ -6,12 +6,38 @@ public class Main {
 //        System.out.println("Enter the number: ");
 //        Scanner sc = new Scanner(System.in);
 //        int num=sc.nextInt();
-        pattern11(5);
+        pattern28(5);
 
 
 
     }
 //    -----------------------------------------------------------------------------------------------------------------
+
+    static void pattern28(int num){
+        for(int row=1 ; row<=2*num-1 ; row++){
+            int nxtMove = row>5 ? 2*num-row : row;
+            for(int space=num ; space>nxtMove ; space--){
+                System.out.print(" ");
+            }
+            for(int col=1 ; col<=nxtMove ; col++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+//    -----------------------------------------------------------------------------------------------------------------
+    static void pattern12(int num){
+        for(int row=1 ; row<=2*num ; row++){
+            int nxtMove = row>num ?  2*num-row+1 : row;
+            for(int space=1; space<nxtMove ; space++){
+                System.out.print(" ");
+            }
+            for(int col=5 ; col>=nxtMove ; col--){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
 
 
 //    -----------------------------------------------------------------------------------------------------------------
@@ -19,10 +45,10 @@ public class Main {
     static void pattern11(int num){
         for(int row=0 ; row<=num ; row++){
             for(int space=0; space<row ; space++){
-                System.out.print("  ");
+                System.out.print(" ");
             }
             for(int col=row; col<num; col++){
-                System.out.print("   *");
+                System.out.print("* ");
             }
             System.out.println();
         }
