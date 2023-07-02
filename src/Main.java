@@ -6,7 +6,7 @@ public class Main {
 //        System.out.println("Enter the number: ");
 //        Scanner sc = new Scanner(System.in);
 //        int num=sc.nextInt();
-        pattern14(5);
+        pattern15(5);
 
 
 
@@ -26,6 +26,28 @@ public class Main {
         }
     }
 //    -----------------------------------------------------------------------------------------------------------------
+
+    static void pattern15(int num){
+        for(int row=0;row<2*num-1;row++){
+            int n=row>num-1?2*num-row-1:row+1;
+            for(int space=num;space>n;space--){
+                System.out.print(" ");
+            }
+            for(int col=0;col<=0;col++){
+                System.out.print("*");
+                int k = row>num-1?2*(2*num-row-1)-2:2*row;       //imp_logic
+                if(row>0&row<2*num-2){
+                    for(int inspace=1;inspace<k;inspace++){
+                        System.out.print(" ");
+                    }
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+//    -----------------------------------------------------------------------------------------------------------------
+
 
     static void pattern14(int num){
         for(int row=0;row<num;row++){
