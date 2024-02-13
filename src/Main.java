@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -6,10 +7,35 @@ public class Main {
 //        System.out.println("Enter the number: ");
 //        Scanner sc = new Scanner(System.in);
 //        int num=sc.nextInt();
-        pattern15(5);
+        int[][] arr = new int[100][100];
+        pattern16(5,arr);
 
 
 
+    }
+//    -----------------------------------------------------------------------------------------------------------------
+
+
+    static void pattern16(int num,int[][] arr) {
+        //setting values in array
+        for(int row=0;row<num;row++){
+            arr[row][0]=1;
+            arr[row][row]=1;
+            for(int col=row-1;col>0;col--){
+                System.out.println(arr[row][col]=arr[row-1][col]+arr[row-1][col-1]);
+            }
+        }
+
+        // printing
+        for(int row=0;row<num;row++){
+            for(int space=row;space<num;space++){
+                System.out.print(" ");
+            }
+            for(int col=0;col<=row;col++){
+                System.out.print(arr[row][col]+" ");
+            }
+            System.out.println();
+        }
     }
 //    -----------------------------------------------------------------------------------------------------------------
 
